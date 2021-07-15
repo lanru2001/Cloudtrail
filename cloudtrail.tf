@@ -1,6 +1,6 @@
 data "aws_caller_identity" "current" {}
 
-resource "aws_cloudtrail" "urlib_cloudtrail" {
+resource "aws_cloudtrail" "app_cloudtrail" {
   name                          = "${var.namespace}-cloudtrail-${var.stage}"
   s3_bucket_name                = aws_s3_bucket.uclib_cloudtrail_bucket.bucket   #"${var.namespace}-cloudtrail-${var.stage}" 
   s3_key_prefix                 = "prefix"
